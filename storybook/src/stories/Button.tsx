@@ -13,6 +13,9 @@ export interface ButtonProps {
   label: string;
   /** Optional click handler */
   onClick?: () => void;
+  /** This value can add an icon to the button*/
+  icon?: string;
+
 }
 
 /** Primary UI component for user interaction */
@@ -21,6 +24,7 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  icon,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
@@ -32,6 +36,7 @@ export const Button = ({
       {...props}
     >
       {label}
+      {icon}
     </button>
   );
 };
