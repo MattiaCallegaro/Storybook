@@ -1,3 +1,6 @@
-export const Badge: React.FC = () => {
-    return <div>Badge</div>
-}
+import "../Badge.css";
+
+export const Badge: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+    return <div className="badge">{children}</div>;
+};
+
