@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}   
+
+/* `rimuoviamo il margine predefinito dei nostri elementi */
+
+*{
+    margin: 0;
+}
+
+/* `Miglioriamo la leggibilità del nostrro carattere */
+
+body {
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+
+}
+/* Cambiamo il display di defautl dei media in block */
+
+img, video, svg, canvas, audio, iframe, embed {
+    display: block;
+    max-width: 100%;
+}
+
+:where(*) {
+    font: inherit;
+    color: inherit;
+}
+
+/* I controlli dei form erediteranno lo stile dei loro genitori */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
