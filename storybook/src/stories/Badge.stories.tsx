@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "../components/Badge/Badge"
+
+import { Badge } from "../components/Badge/Badge";
 
 const meta: Meta<typeof Badge> = {
-    title: "Atoms/Badge",
+    title: "Components/Badge",
     component: Badge,
     argTypes: {
         children: { control: "text" },
@@ -17,10 +18,20 @@ const meta: Meta<typeof Badge> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Badge>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
-        children: "Badge",
-    },
+    render: ({ children, variant }) => (
+        <Badge variant={variant}>{children}</Badge>
+    ),
+};
+
+export const AllBadges: Story = {
+    render: ({ children }) => (
+        <div style={{ display: "flex", gap: "var(--spacing-sm)" }}>
+            <Badge variant="neutral">{children}</Badge>
+            <Badge variant="positive">{children}</Badge>
+            <Badge variant="negative">{children}</Badge>
+        </div>
+    ),
 };

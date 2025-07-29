@@ -49,7 +49,7 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
                 align-items: center;
             }
             .info {
-                background-color:rgba(4, 255, 4, 1);
+                background-color:rgba(247, 3, 255, 1);
                 height: var(--story-spacing);
                 border-radius: 2px;
                 width: var(--story-spacing);
